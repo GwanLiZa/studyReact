@@ -28,17 +28,20 @@ function App() {
     {
         id: 1,
         username: 'tester1',
-        email: 'test1@gmail.com'
+        email: 'test1@gmail.com',
+        active: true
     },
     {
         id: 2,
         username: 'tester2',
-        email: 'test2@gmail.com'
+        email: 'test2@gmail.com',
+        active:  false
     },
     {
         id: 3,
         username: 'tester3',
-        email: 'test3@gmail.com'
+        email: 'test3@gmail.com',
+        active: false
     }
   ]);
 
@@ -63,6 +66,13 @@ function App() {
     setUsers(users.filter(user => user.id !== id));
   }
 
+  const onToggle = id => {
+    setUsers(
+      users.map(user =>
+        user.id === id ? { ...user, active: !user.active } : user)
+    )
+  }
+
 
   const wave = 'nice body';
   const darkStyle = {
@@ -81,7 +91,7 @@ function App() {
         onCreate={onCreate}
 
       />
-      <UserList users={users} onRemove={onRemove}/>
+      <UserList users={users} onRemove={onRemove} onToggle={onToggle}/>
       <InputSamples/>
       <InputSample/>
       <Counter/>
