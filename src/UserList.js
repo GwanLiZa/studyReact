@@ -8,24 +8,7 @@ function User({ user }) {
     )
 }
 
-function UserList() {
-    const users = [
-        {
-            id: 1,
-            username: 'tester1',
-            email: 'test1@gmail.com'
-        },
-        {
-            id: 2,
-            username: 'tester2',
-            email: 'test2@gmail.com'
-        },
-        {
-            id: 3,
-            username: 'tester3',
-            email: 'test3@gmail.com'
-        }
-    ];
+function UserList({users}) {
 
     const array = ['a', 'b', 'c', 'd'];
 
