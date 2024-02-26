@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 
 function User({ user, onRemove, onToggle}) {
     useEffect(() => {
-        console.log('짜잔');
-        console.log(user);
+        // console.log('짜잔');
+        //console.log(user);
         return () => {
-            console.log('내가 사라져볼게 얍');
-            console.log(user);
+            //console.log('내가 사라져볼게 얍');
+            //console.log(user);
         };
     }, [user]); // 읭?
 
