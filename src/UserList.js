@@ -1,20 +1,21 @@
 import React from 'react';
 
-function User({ user }) {
+function User({ user, onRemove }) {
     return (
         <div>
             <b>{user.username}</b> <span>({user.email})</span>
+            <button onClick={() => onRemove(user.id)}>삭제</button>
         </div>
     )
 }
 
-function UserList({users}) {
+function UserList({users, onRemove}) {
 
     const array = ['a', 'b', 'c', 'd'];
 
     return (
         <>
-            <div>
+            {/* <div>
                 <div>
                     <b>{users[0].username}</b> <span>({users[0].email})</span>
                 </div>
@@ -24,15 +25,17 @@ function UserList({users}) {
                 <div>
                     <b>{users[2].username}</b> <span>({users[2].email})</span>
                 </div>
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
                 <User user={users[0]} key={users[0].id} />
                 <User user={users[1]} key={users[1].id} />
                 <User user={users[2]} key={users[2].id} />
-            </div>
+            </div> */}
+            
+            {/* 동적인 배열을 랜더링 하기 위해서는 map 함수를 사용할 것 */}
             <div>
                 {users.map((user, index) => (
-                    <User user={user} key={index} /> 
+                    <User user={user} key={index} onRemove={onRemove} /> 
                 ))}
             </div>
             <div>

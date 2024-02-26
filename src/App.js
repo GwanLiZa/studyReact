@@ -59,6 +59,10 @@ function App() {
     nextId.current += 1;
   };
 
+  const onRemove = id => {
+    setUsers(users.filter(user => user.id !== id));
+  }
+
 
   const wave = 'nice body';
   const darkStyle = {
@@ -77,7 +81,7 @@ function App() {
         onCreate={onCreate}
 
       />
-      <UserList users={users}/>
+      <UserList users={users} onRemove={onRemove}/>
       <InputSamples/>
       <InputSample/>
       <Counter/>
