@@ -2,6 +2,7 @@ import React from 'react';
 import Hello from './Hello';
 import Wrapper from './Wrapper';
 import Counter from './Counter';
+import InputSample from './InputSample';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <Wrapper>
+      <InputSample/>
       <Counter/>
       <Hello // 열리는 태그 안에서는 주석을 적을 수 있다 
       />
