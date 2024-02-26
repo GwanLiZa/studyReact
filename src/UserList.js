@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function User({ user, onRemove, onToggle}) {
+    useEffect(() => {
+        console.log('짜잔');
+        console.log(user);
+        return () => {
+            console.log('내가 사라져볼게 얍');
+            console.log(user);
+        };
+    }, [user]); // 읭?
+
+    // useEffect(() => {
+    //     console.log(user);
+    // });
+
     return (
         <div>
             <b
@@ -41,7 +54,7 @@ function UserList({users, onRemove, onToggle}) {
             {/* 동적인 배열을 랜더링 하기 위해서는 map 함수를 사용할 것 */}
             <div>
                 {users.map((user, index) => (
-                    <User user={user} key={index} onRemove={onRemove} onToggle={onToggle}/> 
+                    <User user={user} key={user.id} onRemove={onRemove} onToggle={onToggle}/> 
                 ))}
             </div>
             <div>
