@@ -16,8 +16,8 @@ function App() {
     <Wrapper>
       <Hello // 열리는 태그 안에서는 주석을 적을 수 있다 
       />
-      <Hello comment="날씨가 좋죠?" />
-      <Hello comment="으악 더러워" color='brown' />
+      <Hello comment="날씨가 좋죠?" isSpecial={true} />
+      <Hello comment="으악 더러워" color='brown' isSpecial />
       <div style = {darkStyle}>안녕하지 못해요</div>
       <div>{wave}</div>
       <div className="gray-box">회색 상자</div>
