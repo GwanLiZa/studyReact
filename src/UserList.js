@@ -30,7 +30,7 @@ function User({ user, onRemove, onToggle}) {
 
 function UserList({users, onRemove, onToggle}) {
 
-    const array = ['a', 'b', 'c', 'd'];
+    // const array = ['a', 'b', 'c', 'd'];
 
     return (
         <>
@@ -57,9 +57,9 @@ function UserList({users, onRemove, onToggle}) {
                     <User user={user} key={user.id} onRemove={onRemove} onToggle={onToggle}/> 
                 ))}
             </div>
-            <div>
+            {/* <div>
                 {array.map(item => <div>{item}</div>)}
-            </div>
+            </div> */}
         </>
     );
 }
