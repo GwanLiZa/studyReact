@@ -2,6 +2,7 @@ import React, { useRef, useState, useMemo, useCallback } from 'react';
 import Hello from './Hello';
 import Wrapper from './Wrapper';
 import Counter from './Counter';
+import Counter2 from './Counter2';
 import InputSample from './InputSample';
 import InputSamples from './InputSamples';
 import UserList from './UserList';
@@ -102,6 +103,7 @@ function App() {
       <div>활성사용자 수: {count}</div>
       <InputSamples/>
       <InputSample/>
+      <Counter2/>
       <Counter/>
       <Hello // 열리는 태그 안에서는 주석을 적을 수 있다 
       />
